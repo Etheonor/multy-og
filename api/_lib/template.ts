@@ -18,14 +18,10 @@ const mono = readFileSync(`${__dirname}/../_fonts/Vera-Mono.woff2`).toString(
 );
 
 function getCss(theme: string, fontSize: string) {
-  let background = "#FCFCFC";
   let foreground = "#0F172A";
-  let radial = "lightgray";
 
   if (theme === "dark") {
-    background = "black";
     foreground = "white";
-    radial = "dimgray";
   }
   return `
     @font-face {
