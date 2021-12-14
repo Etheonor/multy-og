@@ -18,8 +18,8 @@ const mono = readFileSync(`${__dirname}/../_fonts/Vera-Mono.woff2`).toString(
 );
 
 function getCss(theme: string, fontSize: string) {
-  let background = "#F9F4EF";
-  let foreground = "black";
+  let background = "#FCFCFC";
+  let foreground = "#0F172A";
   let radial = "lightgray";
 
   if (theme === "dark") {
@@ -50,16 +50,17 @@ function getCss(theme: string, fontSize: string) {
       }
 
     body {
-        background: ${background};
-        background-image: radial-gradient(circle at 25px 25px, ${radial} 2%, transparent 0%), radial-gradient(circle at 75px 75px, ${radial} 2%, transparent 0%);
-        background-size: 100px 100px;
+        background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
         height: 100vh;
         display: flex;
         text-align: center;
         align-items: center;
         justify-content: center;
-        border: 5px solid #020826;
+        padding: 0;
+        margin: 0;
+        text-shadow: 2px 2px 9px rgba(255,255,255,0.71);
     }
+
 
     code {
         color: #D400FF;
@@ -81,7 +82,7 @@ function getCss(theme: string, fontSize: string) {
     }
 
     .logo {
-        margin: 0 75px;
+        
     }
 
     .plus {
@@ -91,8 +92,9 @@ function getCss(theme: string, fontSize: string) {
     }
 
     .spacer {
-        margin: 150px;
+        margin: 50px 150px 50px 150px;
     }
+
 
     .emoji {
         height: 1em;
