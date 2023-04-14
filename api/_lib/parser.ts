@@ -57,8 +57,8 @@ function getArray(stringOrArray: string[] | string | undefined): string[] {
 function getDefaultImages(images: string[], theme: Theme): string[] {
   const defaultImage =
     theme === "light"
-      ? "https://multy.me/logo-multy.png"
-      : "https://multy.me/logo-multy.png";
+      ? "https://multy.me/logo-multy.svg"
+      : "https://multy.me/logo-multy.svg";
 
   if (!images || !images[0]) {
     return [defaultImage];
